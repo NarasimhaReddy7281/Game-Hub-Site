@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Game Hub – Terms of Service</title>
+<title>Game Hub – Privacy Policy</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -132,14 +132,37 @@
     content: ""; position: absolute; left: 0; top: 9px;
     width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: 0.7;
   }
+  li strong { color: #e6e6e6; }
+
+  /* DATA TABLE (permissions / third-party) */
+  .info-table {
+    width: 100%; border-collapse: collapse; margin-top: 14px;
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; overflow: hidden;
+  }
+  .info-table td { padding: 13px 16px; font-size: 14px; border-bottom: 1px solid var(--card-border); vertical-align: top; }
+  .info-table tr:last-child td { border-bottom: none; }
+  .info-table td:first-child { color: var(--text-faint); width: 38%; font-weight: 600; }
+  .info-table td:last-child { color: #d6d6e0; }
+
+  /* DEVELOPER INFO CARD */
+  .dev-card {
+    background: linear-gradient(180deg, #14142a 0%, #101024 100%);
+    border: 1px solid var(--card-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px; padding: 28px 26px; margin: 8px 0 32px;
+  }
+  .dev-card h2 { color: #fff; font-size: 19px; margin-bottom: 6px; }
+  .dev-card > p.intro { color: var(--text-dim); font-size: 14.5px; margin-bottom: 16px; }
+  .dev-card table { width: 100%; border-collapse: collapse; }
+  .dev-card td { padding: 11px 0; font-size: 14px; border-bottom: 1px solid #23233f; }
+  .dev-card tr:last-child td { border-bottom: none; }
+  .dev-card td:first-child { color: var(--text-faint); width: 38%; }
+  .dev-card td:last-child { color: #d6d6e0; }
+  .dev-card .footnote { color: var(--text-faint); font-size: 12.5px; margin-top: 16px; }
 
   .highlight-box {
     background: var(--accent-soft); border: 1px solid rgba(79,195,247,0.25);
     border-radius: 10px; padding: 16px 18px; margin-top: 14px; font-size: 14px; color: #cfe9f7;
-  }
-  .warn-box {
-    background: rgba(255, 111, 97, 0.08); border: 1px solid rgba(255, 111, 97, 0.25);
-    border-radius: 10px; padding: 16px 18px; margin-top: 14px; font-size: 14px; color: #f0b8b2;
   }
 
   .contact-card {
@@ -193,15 +216,15 @@
   <div class="logo"><span class="dot"></span>Game Hub</div>
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-    <li><a href="terms.html" class="active">Terms</a></li>
+    <li><a href="privacy-policy.html" class="active">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms</a></li>
   </ul>
 </nav>
 
 <header class="page-header">
-  <div class="eyebrow">Please read before playing</div>
-  <h1>Terms of Service</h1>
-  <p class="lede">The rules for using Game Hub and our mini games — kept short and easy to follow.</p>
+  <div class="eyebrow">Your data, explained simply</div>
+  <h1>Privacy Policy</h1>
+  <p class="lede">How Game Hub collects, uses, and protects information when you play our mini games.</p>
   <div class="meta-row">
     <span class="meta-chip">App: <strong>Game Hub</strong></span>
     <span class="meta-chip">Last Updated: <strong>April 10, 2026</strong></span>
@@ -214,72 +237,115 @@
   <aside class="toc">
     <h3>On this page</h3>
     <ol>
-      <li><a href="#acceptance">1. Acceptance of Terms</a></li>
-      <li><a href="#use-of-app">2. Use of the App</a></li>
-      <li><a href="#ip">3. Intellectual Property</a></li>
-      <li><a href="#ads">4. Advertisements</a></li>
-      <li><a href="#warranties">5. Disclaimer of Warranties</a></li>
-      <li><a href="#liability">6. Limitation of Liability</a></li>
-      <li><a href="#changes">7. Changes to These Terms</a></li>
-      <li><a href="#law">8. Governing Law</a></li>
+      <li><a href="#introduction">1. Introduction</a></li>
+      <li><a href="#information-we-collect">2. Information We Collect</a></li>
+      <li><a href="#how-we-use">3. How We Use Information</a></li>
+      <li><a href="#permissions">4. Permissions Used</a></li>
+      <li><a href="#third-party">5. Third-Party Services</a></li>
+      <li><a href="#security">6. Data Security</a></li>
+      <li><a href="#children">7. Children's Privacy</a></li>
+      <li><a href="#changes">8. Changes to This Policy</a></li>
+      <li><a href="#developer-info">Developer Information</a></li>
       <li><a href="#contact">9. Contact Us</a></li>
     </ol>
   </aside>
 
   <main>
-    <p class="doc-intro"><strong>In short:</strong> Game Hub is free to use for personal entertainment. Don't misuse the app, don't copy our content, and remember it's provided as-is — no warranties attached.</p>
+    <p class="doc-intro"><strong>In short:</strong> Game Hub does not collect personally identifiable information. Some non-personal, aggregated data may be collected through advertising and analytics services to keep the app free and running smoothly.</p>
 
-    <section class="policy-section" id="acceptance">
-      <div class="section-head"><span class="section-num">1</span><h2>Acceptance of Terms</h2></div>
-      <p>By downloading, installing, or using Game Hub, you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the app.</p>
+    <section class="policy-section" id="introduction">
+      <div class="section-head"><span class="section-num">1</span><h2>Introduction</h2></div>
+      <p>Welcome to <strong>Game Hub</strong>, a mobile gaming platform featuring multiple mini games, available on Android. We are committed to protecting your privacy. This Privacy Policy explains what information may be collected when you use our app, how it is used, and your rights regarding that information. By using Game Hub, you agree to the terms described in this policy.</p>
     </section>
 
-    <section class="policy-section" id="use-of-app">
-      <div class="section-head"><span class="section-num">2</span><h2>Use of the App</h2></div>
-      <p>Game Hub is provided for personal, non-commercial entertainment use only. You agree not to:</p>
+    <section class="policy-section" id="information-we-collect">
+      <div class="section-head"><span class="section-num">2</span><h2>Information We Collect</h2></div>
+      <p>We do not collect, store, or share any personally identifiable information (PII) such as your name, email address, phone number, or location.</p>
+      <p>The following non-personal data may be collected automatically, primarily through third-party advertising and analytics services:</p>
       <ul>
-        <li>Use the app for any unlawful purpose</li>
-        <li>Attempt to reverse engineer, modify, or tamper with the app or its content</li>
-        <li>Use automated tools, bots, or scripts to interact with the app</li>
-        <li>Attempt to gain unauthorized access to any part of the app or its infrastructure</li>
+        <li>Device type and operating system version</li>
+        <li>App usage and interaction data (e.g., which games are played)</li>
+        <li>Advertising identifiers (e.g., Google Advertising ID)</li>
+        <li>Approximate location (country/region level, for ad targeting only)</li>
+        <li>Crash reports and performance data</li>
       </ul>
+      <div class="highlight-box">This data is collected in aggregate and cannot be used to identify you personally.</div>
     </section>
 
-    <section class="policy-section" id="ip">
-      <div class="section-head"><span class="section-num">3</span><h2>Intellectual Property</h2></div>
-      <p>All content within Game Hub, including game designs, graphics, code, and branding, is the property of Game Hub and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works without prior written permission.</p>
+    <section class="policy-section" id="how-we-use">
+      <div class="section-head"><span class="section-num">3</span><h2>How We Use Information</h2></div>
+      <p>Any data collected is used solely for the following purposes:</p>
+      <ul>
+        <li>Displaying relevant advertisements within the app</li>
+        <li>Improving app performance and fixing bugs</li>
+        <li>Understanding general usage patterns to improve user experience</li>
+        <li>Complying with legal obligations</li>
+      </ul>
+      <p>We do not sell, trade, or rent any user data to third parties.</p>
     </section>
 
-    <section class="policy-section" id="ads">
-      <div class="section-head"><span class="section-num">4</span><h2>Advertisements</h2></div>
-      <p>Game Hub may display advertisements provided by third-party services such as Google AdMob. These ads are subject to the respective advertiser's terms and policies. Game Hub is not responsible for the content of third-party advertisements.</p>
+    <section class="policy-section" id="permissions">
+      <div class="section-head"><span class="section-num">4</span><h2>Permissions Used</h2></div>
+      <p>Game Hub may request the following permissions on your Android device:</p>
+      <table class="info-table">
+        <tr><td>Internet Access (INTERNET)</td><td>Required to load advertisements and enable online features within the app.</td></tr>
+        <tr><td>Network State (ACCESS_NETWORK_STATE)</td><td>Used to check connectivity before loading ads or online content.</td></tr>
+      </table>
+      <p style="margin-top:14px;">No permissions are used to access your camera, microphone, contacts, storage, or location beyond what is listed above.</p>
     </section>
 
-    <section class="policy-section" id="warranties">
-      <div class="section-head"><span class="section-num">5</span><h2>Disclaimer of Warranties</h2></div>
-      <div class="warn-box">Game Hub is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not guarantee that the app will be error-free, uninterrupted, or free of viruses or other harmful components.</div>
+    <section class="policy-section" id="third-party">
+      <div class="section-head"><span class="section-num">5</span><h2>Third-Party Services</h2></div>
+      <p>Game Hub may use the following third-party services. Each service operates under its own privacy policy:</p>
+      <table class="info-table">
+        <tr>
+          <td>Google AdMob</td>
+          <td>Used to display advertisements within the app. AdMob may collect device information and advertising identifiers to serve personalized ads.<br/><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy →</a></td>
+        </tr>
+        <tr>
+          <td>Google Play Services</td>
+          <td>Used for app distribution and optional analytics.<br/><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy →</a></td>
+        </tr>
+      </table>
+      <p style="margin-top:14px;">We encourage you to review the privacy policies of these third-party providers for more detail.</p>
     </section>
 
-    <section class="policy-section" id="liability">
-      <div class="section-head"><span class="section-num">6</span><h2>Limitation of Liability</h2></div>
-      <p>To the fullest extent permitted by law, Game Hub and its developers shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of or inability to use the app.</p>
+    <section class="policy-section" id="security">
+      <div class="section-head"><span class="section-num">6</span><h2>Data Security</h2></div>
+      <p>We take reasonable precautions to protect the limited data associated with your use of Game Hub. Since we do not collect or store personal information on our own servers, the risk to your personal data is minimal. Third-party services used within the app maintain their own security standards in accordance with industry best practices.</p>
+    </section>
+
+    <section class="policy-section" id="children">
+      <div class="section-head"><span class="section-num">7</span><h2>Children's Privacy</h2></div>
+      <p>Game Hub is designed for a general audience and is not specifically directed at children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided personal information through the app, please contact us at <a href="mailto:ugra7281@gmail.com">ugra7281@gmail.com</a> and we will take prompt action to address the concern.</p>
+      <p>Advertisements served through Google AdMob comply with applicable regulations regarding advertising to children.</p>
     </section>
 
     <section class="policy-section" id="changes">
-      <div class="section-head"><span class="section-num">7</span><h2>Changes to These Terms</h2></div>
-      <p>We reserve the right to update these Terms of Service at any time. Changes will be indicated by updating the "Last Updated" date above. Continued use of the app after any changes constitutes acceptance of the updated terms.</p>
+      <div class="section-head"><span class="section-num">8</span><h2>Changes to This Policy</h2></div>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last Updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of Game Hub after any changes constitutes your acceptance of the updated policy.</p>
     </section>
 
-    <section class="policy-section" id="law">
-      <div class="section-head"><span class="section-num">8</span><h2>Governing Law</h2></div>
-      <p>These Terms of Service shall be governed by and construed in accordance with applicable local laws. Any disputes arising from these terms shall be resolved in the appropriate jurisdiction.</p>
+    <section class="policy-section" id="developer-info" style="border-bottom:none; padding-bottom:0;">
+      <div class="dev-card">
+        <h2>Developer Information</h2>
+        <p class="intro">Game Hub is developed and maintained by an independent developer. Below are the contact and identification details for the developer responsible for this application.</p>
+        <table>
+          <tr><td>Developer Name</td><td>Manav Rachna Students</td></tr>
+          <tr><td>Email</td><td><a href="mailto:ugra7281@gmail.com">ugra7281@gmail.com</a></td></tr>
+          <tr><td>Website</td><td><a href="https://store.indusappstore.com" target="_blank">Game Byte on Indus Appstore</a></td></tr>
+          <tr><td>App Name</td><td>Game Byte</td></tr>
+          <tr><td>Platform</td><td>Android</td></tr>
+        </table>
+        <p class="footnote">For any questions, concerns, or data-related requests, please contact the developer directly using the email above.</p>
+      </div>
     </section>
 
     <section class="policy-section" id="contact" style="border-bottom:none;">
       <div class="section-head"><span class="section-num">9</span><h2>Contact Us</h2></div>
       <div class="contact-card">
-        <p>For questions about these Terms of Service, contact us at:</p>
-        <a class="email-btn" href="mailto:nandhakumar8034@gmail.com">nandhakumar8034@gmail.com</a>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+        <a class="email-btn" href="mailto:ugra7281@gmail.com">ugra7281@gmail.com</a>
       </div>
     </section>
   </main>
@@ -291,12 +357,13 @@
   <div class="footer-links">
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="terms.html">Terms of Service</a>
-    <a href="mailto:nandhakumar8034@gmail.com">Contact</a>
+    <a href="mailto:ugra7281@gmail.com">Contact</a>
   </div>
   <p>&copy; 2026 Game Hub. All rights reserved.</p>
 </footer>
 
 <script>
+  // Highlight active TOC link on scroll + show/hide back-to-top button
   const sections = document.querySelectorAll('section[id]');
   const tocLinks = document.querySelectorAll('.toc a');
   const backToTop = document.getElementById('backToTop');
